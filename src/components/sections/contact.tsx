@@ -14,6 +14,7 @@ import {
   Instagram,
   Dribbble,
 } from "lucide-react";
+import { FaBehanceSquare } from "react-icons/fa";
 
 const contactInfo = [
   {
@@ -49,8 +50,13 @@ const socialLinks = [
   },
   {
     icon: Dribbble,
-    href: "https://www.behance.net/kushalbiswas10",
+    href: "https://dribbble.com/kushal-biswas",
     label: "Dribbble",
+  },
+  {
+    icon: FaBehanceSquare,
+    href: "https://www.behance.net/kushalbiswas10",
+    label: "Behance",
   },
 ];
 
