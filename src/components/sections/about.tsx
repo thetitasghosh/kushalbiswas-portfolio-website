@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 const skills = [
   "Brand Identity",
@@ -94,10 +95,22 @@ export function About() {
                 ))}
               </div>
             </div>
+            <Button
+              variant="outline"
+              className="gap-2  hover:bg-green-500 hover:text-white"
+              asChild
+            >
+              <Link
+                href="/Kushal_Biswas_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                // className="pt-2"
 
-            <Button variant="outline" className="gap-2  hover:bg-green-500 hover:text-white" >
-              <Download size={16} />
-              Download CV
+                download={"Kushal_Biswas_CV.pdf"}
+              >
+                <Download size={16} />
+                Download CV
+              </Link>
             </Button>
           </div>
         </div>
