@@ -31,7 +31,7 @@ export function Hero() {
           </Button>
         </div>
       </div>
-      <div className="absolute md:bottom-8 bottom-1 md:left-[49.4%] right-5 md:-translate-x-1/2 animate-bounce">
+      <div className="absolute md:bottom-2  bottom-1 md:left-[49.4%] left-[48%] right-5 md:-translate-x-1/2 animate-bounce">
         <Link
           href="#work"
           className="text-muted-foreground hover:text-foreground w-fit flex items-center justify-center h-10 p-2.5 border-gray-500 rounded-full py-2.5 border-2 transition-colors"

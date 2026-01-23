@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "kushalbiswas@gmail.com",
-    href: "mailto:kushalbiswas@gmail.com",
+    value: "hello.kushalbiswas@gmail.com",
+    href: "mailto:hello.kushalbiswas@gmail.com",
   },
   {
     icon: Phone,
@@ -47,7 +47,11 @@ const socialLinks = [
     href: "https://www.instagram.com/kushaalbiswass/",
     label: "Instagram",
   },
-  { icon: Dribbble, href: "#", label: "Dribbble" },
+  {
+    icon: Dribbble,
+    href: "https://www.behance.net/kushalbiswas10",
+    label: "Dribbble",
+  },
 ];
 
 export function Contact() {
