@@ -1,118 +1,148 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import Link from "next/link";
+"use client";
 
-const skills = [
-  "Brand Identity",
-  "Logo Design",
-  "Typography",
-  "Print Design",
-  "UI/UX Design",
-  "Social Media",
-  "Illustration",
-  "Motion Graphics",
-];
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Palette, Video, Box, Sparkles } from "lucide-react";
 
-const tools = [
-  "Adobe Photoshop",
-  "Adobe Illustrator",
-  "Adobe InDesign",
-  "Figma",
-  "After Effects",
-  "Premiere Pro",
+const highlights = [
+  {
+    icon: Palette,
+    title: "Visual Design",
+    description: "Creating stunning brand identities and marketing materials",
+  },
+  {
+    icon: Video,
+    title: "Video Production",
+    description: "Cinematic editing and captivating motion graphics",
+  },
+  {
+    icon: Box,
+    title: "3D Artistry",
+    description: "Immersive 3D models, renders, and animations",
+  },
+  {
+    icon: Sparkles,
+    title: "Creative Direction",
+    description: "Guiding visual strategies that drive results",
+  },
 ];
 
 export function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section id="about" className="py-24 lg:py-32 px-6 lg:px-8 bg-secondary">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative redd rounded-lg overflow-hidden">
-            <div className="aspect-[4/5] rounded-lg overflow-hidden bg-muted ">
-              <Image
-                src="/kushalbiswas-portfolio.jpeg"
-                alt="Kushal Biswas - Graphic Designer"
-                fill
-                className="object-cover"
+    <section id="about" className="py-32 relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center" ref={ref}>
+          {/* Left side - Image/Visual */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative aspect-[4/5] bg-secondary rounded-2xl overflow-hidden">
+              {/* Decorative grid */}
+              <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-px bg-border/50">
+                {Array.from({ length: 9 }).map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="bg-card"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ delay: 0.1 * i }}
+                  />
+                ))}
+              </div>
+
+              {/* Central content */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  className="text-center p-8"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={isInView ? { scale: 1, opacity: 1 } : {}}
+                  transition={{ delay: 0.5 }}
+                >
+                  <div className="text-8xl font-bold text-kushal/20 mb-4">
+                    8+
+                  </div>
+                  <div className="text-xl font-medium text-foreground">
+                    Years of
+                  </div>
+                  <div className="text-xl text-muted-foreground">
+                    Creative Excellence
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Floating accent */}
+              <motion.div
+                className="absolute -top-4 -right-4 w-24 h-24 bg-kushal/10 rounded-full blur-xl"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent rounded-lg hidden lg:block" />
-          </div>
 
-          <div className="space-y-8">
-            <div>
-              <p className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-3">
-                About Me
+            {/* Side decoration */}
+            <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-kushal rounded-full" />
+          </motion.div>
+
+          {/* Right side - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <span className="text-kushal text-sm font-medium tracking-widest uppercase">
+              About Me
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-balance">
+              Crafting Visual Stories That{" "}
+              <span className="text-kushal">Inspire</span>
+            </h2>
+
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                {"I'm"} Kushal Biswas, a multidisciplinary creative with over 8
+                years of experience in graphic design, video editing, and 3D
+                art. My journey began with a passion for visual storytelling,
+                and {"it's"} evolved into a career dedicated to helping brands
+                and individuals communicate their message through compelling
+                visuals.
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-6">
-                Designing with purpose and passion
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  With over 8 years of experience in graphic design, I&apos;ve
-                  had the privilege of working with brands ranging from
-                  ambitious startups to established enterprises. My approach
-                  combines strategic thinking with creative execution.
-                </p>
-                <p>
-                  I believe great design isn&apos;t just about
-                  aesthetics—it&apos;s about solving problems, telling stories,
-                  and creating meaningful connections between brands and their
-                  audiences.
-                </p>
-              </div>
+              <p>
+                I believe that great design is more than {"aesthetics—it's"}
+                about creating meaningful connections between brands and their
+                audiences. Whether {"it's"} a striking brand identity, a
+                cinematic video, or an immersive 3D experience, I approach every
+                project with creativity, precision, and purpose.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground mb-4">
-                Skills
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-xs font-medium bg-background text-foreground rounded-full border border-border"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+            {/* Highlight cards */}
+            <div className="grid sm:grid-cols-2 gap-4 mt-8">
+              {highlights.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  className="p-4 bg-card border border-border rounded-lg group hover:border-kushal/50 transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                  whileHover={{ y: -4 }}
+                >
+                  <item.icon className="w-8 h-8 text-kushal mb-3" />
+                  <h3 className="font-semibold text-foreground mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
-
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground mb-4">
-                Tools
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="px-3 py-1.5 text-xs font-medium bg-background text-foreground rounded-full border border-border"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <Button
-              variant="outline"
-              className="gap-2  hover:bg-green-500 hover:text-white"
-              asChild
-            >
-              <Link
-                href="/Kushal_Biswas_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                // className="pt-2"
-
-                download={"Kushal_Biswas_CV.pdf"}
-              >
-                <Download size={16} />
-                Download CV
-              </Link>
-            </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -136,7 +136,7 @@ export function Contact() {
                     key={social.label}
                     target="_blank"
                     href={social.href}
-                    className="w-10 h-10 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-green-500 hover:border-foreground/20 transition-colors"
+                    className="w-10 h-10 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-kushal hover:border-foreground/20 transition-colors"
                     aria-label={social.label}
                   >
                     <social.icon size={18} />
