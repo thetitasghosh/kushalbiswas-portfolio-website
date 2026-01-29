@@ -161,11 +161,11 @@ export function Hero() {
               <div className="absolute inset-16 bg-secondary/50 rounded-full flex items-center justify-center backdrop-blur-sm border border-border">
                 <div className="text-center p-8 redd size-full rounded-full overflow-hidden">
                   <Image
-                    src={"/kushalbiswas-portfolio.jpeg"}
+                    src={"/kushalbiswas-portfolio-create-p1.png"}
                     width={1080}
                     height={1080}
                     alt=""
-                    className="object-cover scale-125 rede size-full"
+                    className="object-cover scale-125 rede size-full rounded-full overflow-hidden"
                   />
                 </div>
               </div>
@@ -174,15 +174,15 @@ export function Hero() {
               {[
                 { label: "Design", angle: 45 },
                 { label: "Video", angle: 135 },
-                { label: "3D", angle: 205 },
+                { label: "3D", angle: 215 },
                 { label: "Motion", angle: 315 },
               ].map((item, index) => (
                 <motion.div
                   key={item.label}
                   className="absolute w-20 h-20 bg-card border border-border rounded-lg flex items-center justify-center shadow-lg"
                   style={{
-                    top: `${50 + 42 * Math.sin((item.angle * Math.PI) / 180)}%`,
-                    left: `${50 + 42 * Math.cos((item.angle * Math.PI) / 180)}%`,
+                    top: `${50 + 45 * Math.sin((item.angle * Math.PI) / 180)}%`,
+                    left: `${50 + 45 * Math.cos((item.angle * Math.PI) / 180)}%`,
                     transform: "translate(-50%, -50%)",
                   }}
                   initial={{ opacity: 0, scale: 0 }}
