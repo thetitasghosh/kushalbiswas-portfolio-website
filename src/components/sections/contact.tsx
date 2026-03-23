@@ -12,7 +12,7 @@ import {
   MapPin,
   Linkedin,
   Instagram,
-  Dribbble,
+  // Dribbble,
 } from "lucide-react";
 import { FaBehanceSquare } from "react-icons/fa";
 
@@ -48,11 +48,11 @@ const socialLinks = [
     href: "https://www.instagram.com/kushaalbiswass/",
     label: "Instagram",
   },
-  {
-    icon: Dribbble,
-    href: "https://dribbble.com/kushal-biswas",
-    label: "Dribbble",
-  },
+  // {
+  //   icon: Dribbble,
+  //   href: "https://dribbble.com/kushal-biswas",
+  //   label: "Dribbble",
+  // },
   {
     icon: FaBehanceSquare,
     href: "https://www.behance.net/kushalbiswas10",

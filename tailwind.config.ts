@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        kushal: "#145dd4",
+        kushal: "#4469ee",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
