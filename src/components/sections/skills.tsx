@@ -7,28 +7,28 @@ const skillCategories = [
   {
     title: "Design Tools",
     skills: [
-      { name: "Adobe Photoshop", level: 95 },
-      { name: "Adobe Illustrator", level: 90 },
-      { name: "Figma", level: 85 },
-      { name: "Adobe InDesign", level: 80 },
+      { name: "Adobe Photoshop", level: 75 },
+      { name: "Adobe Illustrator", level: 75 },
+      { name: "Figma", level: 70 },
+      { name: "Canva", level: 70 },
     ],
   },
   {
     title: "Video & Motion",
     skills: [
-      { name: "Premiere Pro", level: 92 },
-      { name: "After Effects", level: 88 },
-      { name: "DaVinci Resolve", level: 75 },
-      { name: "Final Cut Pro", level: 70 },
+      // { name: "Premiere Pro", level: 92 },
+      { name: "After Effects", level: 75 },
+      { name: "DaVinci Resolve", level: 60 },
+      // { name: "Final Cut Pro", level: 70 },
     ],
   },
   {
     title: "3D Software",
     skills: [
-      { name: "Blender", level: 90 },
-      { name: "Cinema 4D", level: 82 },
-      { name: "3ds Max", level: 65 },
-      { name: "ZBrush", level: 60 },
+      { name: "Blender", level: 60 },
+      // { name: "Cinema 4D", level: 82 },
+      // { name: "3ds Max", level: 65 },
+      // { name: "ZBrush", level: 60 },
     ],
   },
 ];
@@ -36,11 +36,11 @@ const skillCategories = [
 const toolLogos = [
   "Photoshop",
   "Illustrator",
-  "Premiere",
+  "Canva",
+  "Figma",
   "After Effects",
   "Blender",
-  "Figma",
-  "Cinema 4D",
+  // "Cinema 4D",
   "DaVinci",
 ];
 

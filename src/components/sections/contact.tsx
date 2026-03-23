@@ -20,8 +20,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello.kushalbiswas@gmail.com",
-    href: "mailto:hello.kushalbiswas@gmail.com",
+    value: "hello@kushalbiswas.in",
+    href: "mailto:hello@kushalbiswas.in",
   },
   {
     icon: Phone,

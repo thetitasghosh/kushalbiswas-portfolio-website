@@ -7,39 +7,51 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "Marketing Director",
-    company: "TechFlow Inc.",
+    name: "Arghya Sarkar",
+    company: "Story Seeker Dude",
     content:
-      "Kushal transformed our brand completely. The visual identity they created not only looks stunning but perfectly captures our company's innovative spirit. Our engagement has increased by 40% since the rebrand.",
-    avatar: "SC",
+      "Transformed our brand narrative with a minimalist logo and a high-impact presentation deck that perfectly captures our storytelling essence.",
+    avatar: "AS", // Updated to match initials
   },
   {
     id: 2,
-    name: "Marcus Johnson",
-    role: "Founder & CEO",
-    company: "Velocity Studios",
+    name: "Tapas Chatterjee",
+    company: "Nocturne Coffee",
     content:
-      "Working with Kushal on our product launch video was incredible. They understood our vision immediately and delivered a cinematic piece that exceeded all expectations. The video went viral and drove massive sales.",
-    avatar: "MJ",
+      "Developed a cohesive visual identity and branding strategy that has significantly elevated our premium coffee brand's market presence.",
+    avatar: "TC",
   },
   {
     id: 3,
-    name: "Elena Rodriguez",
-    role: "Creative Director",
-    company: "Luxe Brands",
+    name: "Anupam Majumder",
+    company: "Anubit Technologies",
     content:
-      "The 3D product visualizations Kushal created for us are absolutely breathtaking. The attention to detail and photorealistic quality helped us secure several major retail partnerships.",
-    avatar: "ER",
+      "Expertly handled our in-house design and video editing, delivering sleek, tech-focused visuals that resonate with our corporate audience.",
+    avatar: "AM",
   },
   {
     id: 4,
-    name: "David Park",
-    role: "Head of Content",
-    company: "MediaPulse",
+    name: "Disha Biswas",
+    company: "Krishna's Creations",
     content:
-      "Kushal's motion graphics work is in a league of its own. They brought energy and sophistication to our content that we didn't know was possible. A true creative partner.",
-    avatar: "DP",
+      "A creative powerhouse for our branding needs. The logo and visual assets created were both elegant and perfectly aligned with our artistic vision.",
+    avatar: "DB",
+  },
+  {
+    id: 5, // Corrected ID sequence
+    name: "Abhinava Chowdhury",
+    company: "Bakemills",
+    content:
+      "Produced stunning, print-ready graphics that brought our packaging to life. Exceptional attention to detail and color precision.",
+    avatar: "AC",
+  },
+  {
+    id: 6,
+    name: "Titas Ghosh",
+    company: "Exelth",
+    content:
+      "Brought our healthcare platform to life through dynamic motion graphics and high-end video editing. A master of visual engagement.",
+    avatar: "TG",
   },
 ];
 
@@ -115,7 +127,7 @@ export function Testimonials() {
                       {testimonials[currentIndex].name}
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      {testimonials[currentIndex].role} at{" "}
+                      {/* {testimonials[currentIndex].role} at{" "} */}
                       {testimonials[currentIndex].company}
                     </div>
                   </div>
@@ -160,7 +172,7 @@ export function Testimonials() {
           </div>
 
           {/* Client logos */}
-          <motion.div
+          {/* <motion.div
             className="mt-12 flex flex-wrap items-center justify-center gap-8 opacity-50"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 0.5 } : {}}
@@ -176,7 +188,7 @@ export function Testimonials() {
                 </div>
               ),
             )}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const navLinks = [
   { name: "About", href: "#about" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Skills", href: "#skills" },
-  { name: "Showreel", href: "#showreel" },
-  { name: "Services", href: "#services" },
+  // { name: "Showreel", href: "#showreel" },
+  // { name: "Services", href: "#services" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];
@@ -38,15 +39,20 @@ export function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-7xl  mx-auto px-6 py-4 flex items-center justify-between">
         <motion.a
           href="#"
-          className="text-2xl font-bold tracking-tight"
+          className="text-2xl redd font-bold tracking-tight"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="text-kushal">K</span>
-          <span className="text-foreground">B</span>
+          <Image
+            src={"/Main.png"}
+            alt=""
+            width={40}
+            height={40}
+            className="rounded-md"
+          ></Image>
         </motion.a>
 
         {/* Desktop Navigation */}
@@ -68,7 +74,7 @@ export function Navigation() {
 
         <div className="hidden md:flex items-center gap-4">
           <Button variant="outline" size="sm" asChild>
-            <a href="/Kushal_Biswas_CV.pdf" download>
+            <a href="/Resume.pdf" download>
               <Download className="w-4 h-4 mr-2" />
               Resume
             </a>

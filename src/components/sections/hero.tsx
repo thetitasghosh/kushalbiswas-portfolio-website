@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Play } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -37,21 +37,21 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid  lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.span
+            {/* <motion.span
               className="inline-block text-kushal text-sm font-medium tracking-widest uppercase mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
               Creative Designer & Visual Artist
-            </motion.span>
+            </motion.span> */}
 
             <motion.h1
               className="text-5xl md:text-7xl font-bold leading-tight mb-6"
@@ -81,8 +81,9 @@ export function Hero() {
               transition={{ delay: 0.5 }}
             >
               Transforming ideas into visual masterpieces. I craft compelling
-              designs, cinematic videos, and immersive 3D experiences that
-              captivate audiences and elevate brands.
+              designs, cinematic videos, and immersive 3D experiences,
+              leveraging cutting-edge AI tools to push the boundaries of visual
+              storytelling.
             </motion.p>
 
             <motion.div
@@ -97,10 +98,10 @@ export function Hero() {
                   <ArrowDown className="w-4 h-4 ml-2" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="#showreel">
-                  <Play className="w-4 h-4 mr-2" />
-                  Watch Showreel
+              <Button size="lg" variant={"outline"} asChild>
+                <a href="/Resume.pdf" download>
+                  View Resume
+                  <ArrowDown className="w-4 h-4 ml-2" />
                 </a>
               </Button>
             </motion.div>
@@ -113,9 +114,9 @@ export function Hero() {
               transition={{ delay: 0.8 }}
             >
               {[
-                { value: "8+", label: "Years Experience" },
-                { value: "150+", label: "Projects Completed" },
-                { value: "50+", label: "Happy Clients" },
+                { value: "1+", label: "Years Experience" },
+                { value: "25+", label: "Projects Completed" },
+                { value: "15+", label: "Happy Clients" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-3xl font-bold text-kushal">
@@ -161,7 +162,7 @@ export function Hero() {
               <div className="absolute inset-16 bg-secondary/50 rounded-full flex items-center justify-center backdrop-blur-sm border border-border">
                 <div className="text-center p-8 redd size-full rounded-full overflow-hidden">
                   <Image
-                    src={"/kushalbiswas-portfolio-create-p1.png"}
+                    src={"/me/kushal.jpeg"}
                     width={1080}
                     height={1080}
                     alt=""
@@ -175,14 +176,15 @@ export function Hero() {
                 { label: "Design", angle: 45 },
                 { label: "Video", angle: 135 },
                 { label: "3D", angle: 215 },
-                { label: "Motion", angle: 315 },
+                { label: "Motion", angle: 295 },
+                { label: "AI", angle: 350 },
               ].map((item, index) => (
                 <motion.div
                   key={item.label}
                   className="absolute w-20 h-20 bg-card border border-border rounded-lg flex items-center justify-center shadow-lg"
                   style={{
                     top: `${50 + 45 * Math.sin((item.angle * Math.PI) / 180)}%`,
-                    left: `${50 + 45 * Math.cos((item.angle * Math.PI) / 180)}%`,
+                    left: `${45 + 45 * Math.cos((item.angle * Math.PI) / 180)}%`,
                     transform: "translate(-50%, -50%)",
                   }}
                   initial={{ opacity: 0, scale: 0 }}
@@ -190,7 +192,7 @@ export function Hero() {
                   transition={{ delay: 0.8 + index * 0.1 }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <span className="text-xs font-medium text-foreground">
+                  <span className="text-sm font-medium text-foreground">
                     {item.label}
                   </span>
                 </motion.div>

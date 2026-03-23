@@ -66,7 +66,7 @@ export function About() {
                   transition={{ delay: 0.5 }}
                 >
                   <div className="text-8xl font-bold text-kushal/20 mb-4">
-                    8+
+                    1+
                   </div>
                   <div className="text-xl font-medium text-foreground">
                     Years of
@@ -86,7 +86,7 @@ export function About() {
             </div>
 
             {/* Side decoration */}
-            <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-kushal rounded-full" />
+            <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-36 md:h-60 bg-kushal rounded-full" />
           </motion.div>
 
           {/* Right side - Content */}
@@ -105,19 +105,12 @@ export function About() {
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                {"I'm"} Kushal Biswas, a multidisciplinary creative with over 8
+                I&apos;m Kushal Biswas, a multidisciplinary creative with over 1+
                 years of experience in graphic design, video editing, and 3D
-                art. My journey began with a passion for visual storytelling,
-                and {"it's"} evolved into a career dedicated to helping brands
-                and individuals communicate their message through compelling
-                visuals.
-              </p>
-              <p>
-                I believe that great design is more than {"aesthetics—it's"}
-                about creating meaningful connections between brands and their
-                audiences. Whether {"it's"} a striking brand identity, a
-                cinematic video, or an immersive 3D experience, I approach every
-                project with creativity, precision, and purpose.
+                art. My journey began with a passion for visual storytelling and
+                has evolved into a career dedicated to helping brands
+                communicate through compelling visuals—integrating AI-driven
+                workflows to deliver innovative and high-impact results.
               </p>
             </div>
 
