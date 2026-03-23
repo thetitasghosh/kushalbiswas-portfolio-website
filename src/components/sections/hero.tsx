@@ -166,6 +166,8 @@ export function Hero() {
                     width={1080}
                     height={1080}
                     alt=""
+                    priority
+                    quality={100}
                     className="object-cover scale-125 rede size-full rounded-full overflow-hidden"
                   />
                 </div>
