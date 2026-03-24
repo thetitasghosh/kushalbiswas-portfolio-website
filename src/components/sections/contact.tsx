@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-
+import axios from "axios";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
 import {
   Mail,
   Phone,
@@ -67,11 +68,37 @@ export function Contact() {
     subject: "",
     message: "",
   });
+  const [isPending, setIsPending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsPending(true);
+    try {
+      const res = await axios.post("/api/contact", formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (res.status === 200) {
+        toast({
+          variant: "default",
+          description: "Your message has been sent.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast({
+          variant: "destructive",
+          description: "There was an error sending your message.",
+        });
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        variant: "destructive",
+        description: "Failed to send your message.",
+      });
+    } finally {
+      setIsPending(false);
+    }
   };
 
   const handleChange = (
@@ -216,8 +243,8 @@ export function Contact() {
                   required
                 />
               </div>
-              <Button type="submit" size="lg" className="w-full sm:w-auto">
-                Send Message
+              <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={isPending}>
+                {isPending ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>

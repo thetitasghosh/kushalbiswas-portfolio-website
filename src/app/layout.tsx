@@ -1,8 +1,9 @@
 import React from "react";
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 // import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -22,23 +23,7 @@ export const metadata: Metadata = {
     "UI/UX",
     "portfolio",
   ],
-  icons: {
-    icon: [
-      {
-        url: "/icon-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
+
   // generator: "v0.app",
 };
 
@@ -54,6 +39,7 @@ export default function RootLayout({
       >
         {children}
         {/* <Analytics /> */}
+        <Toaster />
       </body>
     </html>
   );
