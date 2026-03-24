@@ -99,7 +99,7 @@ export function Hero() {
                 </a>
               </Button>
               <Button size="lg" variant={"outline"} asChild>
-                <a href="/Resume.pdf" download>
+                <a href="/Resume.pdf" target="_blank">
                   View Resume
                   <ArrowDown className="w-4 h-4 ml-2" />
                 </a>
