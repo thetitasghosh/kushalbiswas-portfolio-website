@@ -69,20 +69,20 @@ const projects: Project[] = [
     mediaUrl: "/portfolio/videos/netflix.mp4",
     thumbnail: "/portfolio/thumbnails/netflix_thumbnail.png",
   },
+  // {
+  //   id: 4,
+  //   title: "Susmita Nursery Logo Animation",
+  //   category: "video",
+  //   description:
+  //     "Elegant animated logo reveal for SN brand with smooth motion choreography and synchronized sound design.",
+  //   tags: ["Logo Animation", "Motion", "After Effects"],
+  //   color: "from-slate-500/20 to-zinc-500/20",
+  //   mediaType: "video",
+  //   mediaUrl: "/portfolio/videos/sn_logo_animate_mp4.mp4",
+  //   thumbnail: "/portfolio/thumbnails/sn_logo_thumbnail.png",
+  // },
   {
     id: 4,
-    title: "Susmita Nursery Logo Animation",
-    category: "video",
-    description:
-      "Elegant animated logo reveal for SN brand with smooth motion choreography and synchronized sound design.",
-    tags: ["Logo Animation", "Motion", "After Effects"],
-    color: "from-slate-500/20 to-zinc-500/20",
-    mediaType: "video",
-    mediaUrl: "/portfolio/videos/sn_logo_animate_mp4.mp4",
-    thumbnail: "/portfolio/thumbnails/sn_logo_thumbnail.png",
-  },
-  {
-    id: 5,
     title: "Your Maker Logo",
     category: "video",
     description:
@@ -94,7 +94,7 @@ const projects: Project[] = [
     thumbnail: "/portfolio/thumbnails/your_maker_thumbnail.png",
   },
   {
-    id: 6,
+    id: 5,
     title: "Educlass Brand Identity",
     category: "graphic",
     description:
@@ -110,7 +110,7 @@ const projects: Project[] = [
     thumbnail: "/portfolio/graphics/educlass_preview.png",
   },
   {
-    id: 7,
+    id: 6,
     title: "Krishna's Creation Logo Design",
     category: "graphic",
     description:
@@ -122,7 +122,7 @@ const projects: Project[] = [
     thumbnail: "/portfolio/thumbnails/k_logo_thumbnail.png",
   },
   {
-    id: 8,
+    id: 7,
     title: "Nocturne Logo Design",
     category: "graphic",
     description:
@@ -134,7 +134,7 @@ const projects: Project[] = [
     thumbnail: "/portfolio/thumbnails/nlogo_thumbnail.png",
   },
   {
-    id: 9,
+    id: 8,
     title: "SSD Logo Design",
     category: "graphic",
     description:
